@@ -6,7 +6,7 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 14:42:32 by eteh              #+#    #+#             */
-/*   Updated: 2022/02/08 12:13:22 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/08 16:01:01 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*init_str(char const *s, char c)
 		i++;
 	if(!(ptr = (char *)malloc(sizeof(char)*(i + 1))))
 		return (NULL);
-	ft_strlcpy(ptr, s, i + 1)
+	ft_strlcpy(ptr, s, i + 1);
 	return (ptr);
 }
 
@@ -61,7 +61,7 @@ char	**ft_split(char const *s, char c)
 	{
 		while(s[0] == c)
 			s++;
-		if(!(ptr = init_str(s, c)))
+		if(!(ptr[i] = init_str(s, c)))
 		{
 			while(i > 0)
 				free(ptr[i--]);

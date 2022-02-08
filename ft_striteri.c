@@ -6,7 +6,7 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 18:00:54 by eteh              #+#    #+#             */
-/*   Updated: 2022/01/21 18:11:21 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/08 16:05:34 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	int	i;
 
 	i = 0;
-	if(s != '\0' && f != '\0')
+	if(s != NULL && f != NULL)
 	{
 		while(s[i] != '\0')
 		{

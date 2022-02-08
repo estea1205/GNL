@@ -6,11 +6,10 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 17:06:55 by eteh              #+#    #+#             */
-/*   Updated: 2021/10/22 11:24:16 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/08 15:56:39 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_atoi(const char *str)

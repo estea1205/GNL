@@ -6,11 +6,10 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 14:54:52 by eteh              #+#    #+#             */
-/*   Updated: 2021/10/22 11:24:29 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/08 15:56:28 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
