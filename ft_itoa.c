@@ -6,63 +6,60 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 14:24:47 by eteh              #+#    #+#             */
-/*   Updated: 2022/01/21 14:33:45 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/09 18:05:41 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-int len(long nb)
+static char	*ft_array(char *x, unsigned int number, long int len)
 {
-	int len;
-	
-	len = 0;
-	if (nb < 0)
+	while (number > 0)
 	{
-		nb = nb * -1;
-		len++;
+		x[len--] = 48 + (number % 10);
+		number = number / 10;
 	}
-	while(nb > 0)
+	return (x);
+}
+
+static long int	ft_len(int n)
+{
+	int	len;
+
+	len = 0;
+	if (n <= 0)
+		len = 1;
+	while (n != 0)
 	{
-		nb = nb / 10;
 		len++;
+		n = n / 10;
 	}
 	return (len);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *str;
-	long nb;
-	int i;
-	
-	nb = n;
-	i = len(nb);
-	if(!(str = (char*)malloc(sizeof(char) * (i + 1))))
-		return (0);
-	str[i--] = '\0';
-	if(nb == 0)
-	{
-		str[0] = 48;
-		return (str);
-	}
-	if(nb < 0)
-	{
-		str[0] = '-';
-		nb = nb * -1;
-	}
-	if(nb > 0)
-	{
-		str[i] = 48 + (nb % 10);
-		nb = nb / 10;
-		i--;
-	}
-	return (str);
-}
+	char			*x;
+	long int		len;
+	unsigned int	number;
+	int				sign;
 
-int main(void)
-{
-	printf("%s\n", ft_itoa(-012));
-	return(0);
+	sign = 1;
+	len = ft_len(n);
+	x = (char *)malloc(sizeof(char) * (len + 1));
+	if (!x)
+		return (NULL);
+	x[len--] = '\0';
+	if (n == 0)
+		x[0] = '0';
+	if (n < 0)
+	{
+		sign *= -1;
+		number = n * -1;
+		x[0] = '-';
+	}
+	else
+		number = n;
+	x = ft_array(x, number, len);
+	return (x);
 }

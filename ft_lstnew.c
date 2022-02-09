@@ -6,7 +6,7 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 17:24:14 by eteh              #+#    #+#             */
-/*   Updated: 2022/01/28 17:38:07 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/08 22:47:15 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*spc;
 
-	if(!(spc = (t_list*)malloc(sizeof(*spc))))
-		return(NULL);
+	spc = (t_list *)malloc(sizeof(*spc));
+	if (!spc)
+		return (NULL);
 	spc->content = content;
 	spc->next = NULL;
-	return(spc);
+	return (spc);
 }

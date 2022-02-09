@@ -6,7 +6,7 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 18:48:20 by eteh              #+#    #+#             */
-/*   Updated: 2022/01/28 19:05:09 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/08 22:27:36 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
 
-	if(!del || !lst)
+	if (!del || !lst)
 		return ;
-	while(*lst)
+	while (*lst)
 	{
 		tmp = (*lst)->next;
 		ft_lstdelone(*lst, del);

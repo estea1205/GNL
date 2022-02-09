@@ -6,36 +6,33 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 19:17:11 by eteh              #+#    #+#             */
-/*   Updated: 2022/01/28 19:26:58 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/09 17:27:32 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new;
-	t_list	*head;
-	t_list	*tail;
+	t_list	*begin;
+	t_list	*work;
 
-	if(!lst || !f || !del)
-		return (NULL);
-	head = NULL;
-	if(!(new = ft_lstnew(f(lst->content))))
-		return(NULL);
-	ft_lstadd_back(&head, new);
-	tail = head;
-	lst = lst->next;
-	while(lst)
+	if (lst != NULL && f != NULL)
 	{
-		if(!(new = ft_lstnew(f(lst->content))))
+		begin = ft_lstnew(f(lst->content));
+		work = begin;
+		while (lst->next)
 		{
-			ft_lstclear(&head, del);
-			return (NULL);
+			lst = lst->next;
+			work->next = ft_lstnew(ft_strdup(f(lst->content)));
+			if (work->next == NULL)
+			{
+				ft_lstclear(&begin, del);
+				return (NULL);
+			}
+			work = work->next;
 		}
-		ft_lstadd_back(&tail, new);
-		tail = tail->next;
-		lst = lst->next;
+		return (begin);
 	}
-	return (head);
+	return (NULL);
 }

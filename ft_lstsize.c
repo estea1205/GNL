@@ -6,7 +6,7 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 17:45:46 by eteh              #+#    #+#             */
-/*   Updated: 2022/01/28 17:50:06 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/08 22:48:12 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
-	while(lst)
+	while (lst)
 	{
 		lst = lst->next;
 		i++;
 	}
-	return(i);
+	return (i);
 }

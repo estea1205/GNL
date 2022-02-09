@@ -6,7 +6,7 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 18:17:31 by eteh              #+#    #+#             */
-/*   Updated: 2022/01/28 18:26:33 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/08 22:23:23 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*t;
 
-	if(*lst)
+	if (*lst)
 	{
 		t = ft_lstlast(*lst);
 		t->next = &*new;

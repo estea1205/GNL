@@ -6,7 +6,7 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 17:51:12 by eteh              #+#    #+#             */
-/*   Updated: 2022/01/28 17:59:40 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/08 22:38:01 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	if(lst)
-		while(lst->next)
+	if (lst)
+		while (lst->next)
 			lst = lst->next;
-	return(lst);
+	return (lst);
 }

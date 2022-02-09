@@ -13,7 +13,7 @@ BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 BONUS_OBJ = $(BONUS:.c=.o)
 CC = gcc
 RM = rm -f
-CFLAGS = -c -Wall -Werror -Wextra
+CFLAGS = -c -Wall -Werror -Wextra -g -fsanitize=address
 NAME = libft.a
 
 all: $(NAME)

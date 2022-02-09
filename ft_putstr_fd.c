@@ -6,7 +6,7 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 18:16:43 by eteh              #+#    #+#             */
-/*   Updated: 2022/01/21 18:22:41 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/09 17:03:52 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,10 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
-	
 	i = 0;
-	if(!s)
+	if (!s)
 		return ;
-	if(s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		ft_putchar_fd(s[i], fd);
 		i++;

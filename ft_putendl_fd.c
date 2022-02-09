@@ -6,7 +6,7 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 18:23:20 by eteh              #+#    #+#             */
-/*   Updated: 2022/02/08 16:28:51 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/08 22:49:49 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if(!s)
+	if (!s)
 		return ;
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);

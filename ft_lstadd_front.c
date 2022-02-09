@@ -6,7 +6,7 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 17:39:39 by eteh              #+#    #+#             */
-/*   Updated: 2022/01/28 17:45:16 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/08 22:24:11 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if(!lst || !new)
+	if (!lst || !new)
 		return ;
 	new->next = *lst;
 	*lst = new;
