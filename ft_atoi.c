@@ -6,7 +6,7 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 17:06:55 by eteh              #+#    #+#             */
-/*   Updated: 2022/02/08 15:56:39 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/09 23:41:16 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sign);
 }
-/*
-int	main (void)
-{
-	char	a[] = "	 +123";
-	int		b = ft_atoi(a);
-	printf("%d\n", atoi(a));
-}
-*/

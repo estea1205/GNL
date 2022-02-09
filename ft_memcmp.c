@@ -6,11 +6,10 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 17:54:04 by eteh              #+#    #+#             */
-/*   Updated: 2021/10/22 11:22:43 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/09 23:51:29 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
@@ -30,14 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*
-int	main (void)
-{
-	unsigned char a[] = "hello";
-	unsigned char b[] = "hemlo";
-
-	printf("selfmade:%d\n",ft_memcmp(a,b,3));
-	printf("target:%d\n",memcmp(a,b,3));
-	return (0);
-}
-*/

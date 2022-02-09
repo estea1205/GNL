@@ -6,11 +6,10 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 14:09:53 by eteh              #+#    #+#             */
-/*   Updated: 2022/02/09 14:39:40 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/09 23:58:05 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s)

@@ -6,7 +6,7 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 14:54:52 by eteh              #+#    #+#             */
-/*   Updated: 2022/02/08 15:56:28 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/09 23:41:35 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,3 @@ void	ft_bzero(void *s, size_t n)
 	}
 	return ;
 }
-/*
-int	main (void)
-{
-	char a[11] = "Hello World";
-	ft_bzero(a, 0);
-	return (0);
-}	
-*/

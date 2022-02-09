@@ -6,11 +6,10 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 14:21:39 by eteh              #+#    #+#             */
-/*   Updated: 2022/02/09 15:57:48 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/10 00:01:41 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_getstart(char const *s1, char const *set)

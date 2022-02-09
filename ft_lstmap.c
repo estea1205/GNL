@@ -6,7 +6,7 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 19:17:11 by eteh              #+#    #+#             */
-/*   Updated: 2022/02/09 17:27:32 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/09 23:47:41 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		while (lst->next)
 		{
 			lst = lst->next;
-			work->next = ft_lstnew(ft_strdup(f(lst->content)));
+			work->next = ft_lstnew(f(lst->content));
 			if (work->next == NULL)
 			{
 				ft_lstclear(&begin, del);

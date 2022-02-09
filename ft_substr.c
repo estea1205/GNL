@@ -6,7 +6,7 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 14:14:04 by eteh              #+#    #+#             */
-/*   Updated: 2022/02/08 23:23:02 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/10 00:32:40 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,19 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	j;
 	char	*substr;
+	size_t	new_len;
 
+	if (s == NULL)
+		return (NULL);
+	if ((unsigned int) ft_strlen(s) < start)
+		return (ft_strdup(""));
+	new_len = ft_strlen(s + start);
+	if (new_len < len)
+		len = new_len;
 	substr = (char *)malloc(sizeof(*s) * (len + 1));
 	if (!substr)
-		return (0);
-	i = 0;
-	j = 0;
-	while (s[i] != '\0')
-	{
-		if (i >= start && j < len)
-		{
-			substr[j] = s[i];
-			j++;
-		}
-		i++;
-	}
-	substr[j] = 0;
+		return (NULL);
+	ft_strlcpy(substr, s + start, len + 1);
 	return (substr);
 }

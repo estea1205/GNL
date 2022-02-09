@@ -6,11 +6,10 @@
 /*   By: eteh <eteh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 17:08:34 by eteh              #+#    #+#             */
-/*   Updated: 2021/10/22 11:07:02 by eteh             ###   ########.fr       */
+/*   Updated: 2022/02/10 00:00:58 by eteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
@@ -34,14 +33,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-/*	
-int	main (void)
-{
-	char a[] = "Hello World";
-	char b[] = "Wor";
-
-	printf("selfmade:%s\n", ft_strnstr(a,b,11));
-	printf("target:%s\n", strnstr(a,b,11));
-	return (0);
-}
-*/
